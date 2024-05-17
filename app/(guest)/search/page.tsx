@@ -42,7 +42,6 @@ export async function generateMetadata(
   if (urlPath) {
     response = await fetchApi({ urlPath: urlPath });
   }
-  console.log('response: ', response);
   if (nation && response?.nation_name) {
     title = `Tour du lịch ${response.nation_name} ${dateFrom}`
   } else if (filter_search && response?.market_name) {
