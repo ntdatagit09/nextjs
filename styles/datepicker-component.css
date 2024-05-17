@@ -1,0 +1,20 @@
+/* .react-date-picker__wrapper{
+    display: none;
+} */
+
+.sgt-calendar{
+    top: 4%;
+}
+
+.react-calendar__tile--active{
+    background: rgb(177 146 57) !important;
+}
+
+.react-calendar__month-view__days>button:not([disabled]):hover
+{
+    background-color: rgb(253 218 116) !important;
+    color: black;
+}
+.react-calendar__navigation__label{
+    pointer-events: none;
+}

@@ -1,0 +1,128 @@
+#home_page {
+
+    /* Familiar tour */
+    .rt_tour_familiar {
+        width: 100%;
+        height: auto;
+    }
+
+    .rt_tour_right_image_item,
+    .rt_tour_middle_image_item {
+        /* background: url('/img/left-image.jpg'); */
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 12px;
+    }
+
+    .rt_tour_left_title {
+        top: 82%;
+        left: 7%;
+    }
+
+    .rt_tour_right_title {
+        top: 65%;
+        left: 7%;
+    }
+
+    /* end Familiar tour */
+
+
+
+    .rt_tour_load_more {
+        @apply cursor-pointer text-sm font-bold text-sgt-secondary-dark px-3 py-1.5 flex items-center rounded-lg bg-sgt-secondary-light bg-opacity-5;
+        @apply transition ease-in-out duration-300;
+
+        &:hover {
+            @apply bg-sgt-primary-light;
+        }
+    }
+
+    // .rt_tour_load_more {
+    //     background-color: rgb(177 146 57);
+    // }
+
+    // .rt_tour_load_more:hover {
+    //     background-color: rgb(205 172 79);
+    // }
+
+    /* the slides */
+
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-slide {
+        margin: 0 8px !important;
+
+        >div {
+            margin-bottom: 3px;
+        }
+
+    }
+
+    /* the parent */
+    .slick-list {
+        margin: 0 -8px !important;
+
+    }
+
+    .rt_location_tour_custom {
+
+        @apply aspect-16/9 rounded-lg relative shadow-sm;
+
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 10%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0) 0%)
+        }
+
+        .rt_tour_left_background {
+            @apply bg-center bg-no-repeat bg-cover;
+            transform: scale(1, 1);
+            transition: transform 700ms;
+        }
+
+        &:hover .rt_tour_left_background {
+            transform: scale(1.1, 1.1);
+            transform-origin: center center;
+        }
+
+        &.rt_location_tour_customr2c4 {
+            @apply row-span-2 col-span-4
+        }
+
+        &.rt_location_tour_customr4c4 {
+            @apply row-span-4 col-span-4 w-full h-full;
+        }
+    }
+
+
+}
+
+/** Search bar vertical */
+
+@keyframes sgtFadeUp {
+    from {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#searchBarVerticalComponent {
+    animation: sgtFadeUp 700ms;
+    animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    -moz-animation: sgtFadeUp 700ms;
+    /* Firefox */
+    -webkit-animation: sgtFadeUp 700ms;
+    /* Safari and Chrome */
+    -o-animation: sgtFadeUp 700ms;
+    /* Opera */
+}

@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --color-primary-default: #fdd152;
+  --color-primary-dark: #b19239;
+  --color-primary-light: #fdda74;
+
+
+  --color-primary-default-rgb: 253, 209, 82;
+  --color-primary-dark-rgb: 177, 146, 57;
+  --color-primary-light-rgb: 253, 218, 116;
+
+  /* --color-primary-default-rgb: 252, 207, 14;
+  --color-primary-dark-rgb: 176, 144, 9;
+  --color-primary-light: 252, 216, 62; */
+
+  --color-secondary-default: #6c3918;
+  --color-secondary-default-rgb: 108, 57, 24;
+  --color-secondary-dark: #4b2710;
+  --color-secondary-dark-rgb: 75, 39, 16;
+  --color-secondary-light: #896046;
+  --color-secondary-light: 137, 96, 70;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  margin: 0;
+  @apply text-sm;
+}
+
+#__sgt {
+  @apply flex flex-col h-full relative;
+  z-index: 1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --color-primary-default-rgb: 253, 209, 82;
+    --color-primary-dark-rgb: 177, 146, 57;
+    --color-primary-light-rgb: 253, 218, 116;
+
+    --color-secondary-default-rgb: 108, 57, 24;
+    --color-secondary-dark-rgb: 75, 39, 16;
+    --color-secondary-light: 137, 96, 70;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  h4 {
+    @apply text-base;
+  }
+
+  h5 {
+    @apply text-sm;
+  }
+
+  h6 {
+    @apply text-xs;
+  }
+}
+
+.width-primary {
+  max-width: 1222px;
+  width: 1222px
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.bg-sgt-default {
+  background: rgb(var(--color-primary-default-rgb), 80);
+}
+
+.sgt-tab {
+  .sgt-tab-links-wrap {
+    @apply flex flex-row justify-start gap-2 py-2 border-b;
+
+    .sgt-tab-links {
+      @apply py-2 px-4 rounded-md font-medium transition duration-300;
+
+      &:hover,
+      &.active {
+        @apply text-sgt-secondary-light bg-sgt-secondary-dark bg-opacity-5;
+      }
+    }
+  }
+
+  .sgt-tab-content-wrap {
+    @apply pt-3.5 pb-4;
+
+    .sgt-tab-content {
+      @apply hidden;
+
+      &.active {
+        @apply block;
+      }
+    }
+  }
+}
+
+.sgt-container {
+  width: 1160px;
+}
+
+
+@keyframes modalFade {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tour_viewed {
+  .tour_viewed_detail {
+    .tour_viewed_item_series_code {
+      font-size: 10px;
+    }
+  }
+}

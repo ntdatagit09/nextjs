@@ -1,0 +1,28 @@
+.tour_item_vertical {
+    .tour_item_vertical_image {
+        transform: scale(1, 1);
+        transition: transform 700ms;
+    }
+
+    &:hover {
+        .tour_item_vertical_image {
+            transform: scale(1.25, 1.25);
+            transform-origin: center center;
+        }
+    }
+}
+
+
+.tour_item_horizontal {
+    .tour_item_horizontal_image {
+        transform: scale(1, 1);
+        transition: transform 700ms;
+    }
+
+    &:hover {
+        .tour_item_horizontal_image {
+            transform: scale(1.25, 1.25);
+            transform-origin: center center;
+        }
+    }
+}

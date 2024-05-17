@@ -1,0 +1,16 @@
+.slick-arrow {
+    @apply absolute top-1/2 -translate-y-1/2 w-9 h-9 text-base bg-white bg-opacity-30 text-sgt-secondary-dark text-opacity-40 ease-linear duration-300 rounded-full;
+
+    &:hover {
+        @apply bg-sgt-primary-default text-sgt-secondary-dark;
+    }
+}
+
+
+.slick-arrow-previous {
+    @apply left-0;
+}
+
+.slick-arrow-next {
+    @apply right-0;
+}
